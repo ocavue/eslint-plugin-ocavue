@@ -49,40 +49,6 @@ const items = Array.from({ length: count }, (_, index) => {
 
 When a comment sits between `=>` and the body, the rule reports without autofixing so the fix never drops a comment.
 
-## Project structure
-
-- `src/`: source code, with co-located [Vitest](https://vitest.dev/) tests (`*.test.ts`)
-- `dist/`: bundled output (ESM + type declarations), built by [tsdown](https://tsdown.dev/)
-
-## Scripts
-
-Local development needs [Node.js](https://nodejs.org/) v22+ and [pnpm](https://pnpm.io/).
-
-| Command          | Description                                                                                                                |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `pnpm dev`       | Rebuild on change (`tsdown --watch`)                                                                                       |
-| `pnpm build`     | Bundle the library to `dist/`                                                                                              |
-| `pnpm test`      | Run tests with [Vitest](https://vitest.dev/)                                                                               |
-| `pnpm lint`      | Lint with [ESLint](https://eslint.org/), [oxfmt](https://oxc.rs/docs/guide/usage/formatter), and [knip](https://knip.dev/) |
-| `pnpm fix`       | Auto-fix formatting and lint issues                                                                                        |
-| `pnpm typecheck` | Type-check with `tsc`                                                                                                      |
-
-## Publishing
-
-Releases are automated with [release-please](https://github.com/googleapis/release-please) and npm [trusted publishing](https://docs.npmjs.com/trusted-publishers/) (OIDC). No tokens to manage.
-
-1. **First release (manual).** OIDC can't create a brand-new package, so publish the first version by hand:
-
-   ```bash
-   pnpm login
-   pnpm build
-   pnpm publish
-   ```
-
-2. **Enable OIDC.** On [npmjs.com](https://www.npmjs.com/), open the package → **Settings → Trusted Publisher → GitHub Actions**, and set the workflow filename to `release.yml`.
-
-3. **Future releases (automatic).** Push [Conventional Commits](https://www.conventionalcommits.org/) (`fix:`, `feat:`, …) to your default branch (usually `master` or `main`); [release-please](https://github.com/googleapis/release-please) opens a release PR that bumps the version, updates the changelog, and publishes on merge.
-
 ## Sponsors
 
 <p align="center">
