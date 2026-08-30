@@ -3,17 +3,21 @@
   "type": "module",
   "version": "0.0.1",
   "packageManager": "pnpm@11.24.0",
-  "description": "TypeScript starter kit",
+  "description": "Custom ESLint rules from ocavue",
   "author": "ocavue <ocavue@gmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/ocavue",
-  "homepage": "https://github.com/ocavue/starter-ts#readme",
+  "homepage": "https://github.com/ocavue/eslint-plugin-ocavue#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ocavue/starter-ts.git"
+    "url": "https://github.com/ocavue/eslint-plugin-ocavue.git"
   },
-  "bugs": "https://github.com/ocavue/starter-ts/issues",
-  "keywords": [],
+  "bugs": "https://github.com/ocavue/eslint-plugin-ocavue/issues",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
   "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -40,6 +44,9 @@
     "fix:eslint": "eslint --fix",
     "test": "vitest",
     "typecheck": "tsc -b"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0 || ^10.0.0"
   },
   "devDependencies": {
     "@ocavue/eslint-config": "^4.13.5",
