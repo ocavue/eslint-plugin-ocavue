@@ -6,7 +6,7 @@ Custom [ESLint](https://eslint.org/) rules from [ocavue](https://github.com/ocav
 
 ## Usage
 
-Requires ESLint 9 or 10 with flat config.
+Requires ESLint 10 with flat config.
 
 ```sh
 pnpm add -D eslint-plugin-ocavue

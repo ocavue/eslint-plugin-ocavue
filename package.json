@@ -46,7 +46,7 @@
     "typecheck": "tsc -b"
   },
   "peerDependencies": {
-    "eslint": "^9.0.0 || ^10.0.0"
+    "eslint": "^10.0.0"
   },
   "devDependencies": {
     "@ocavue/eslint-config": "^4.13.5",
