@@ -1,6 +1,6 @@
-# TypeScript Library Starter
+# eslint-plugin-ocavue
 
-[![NPM version](https://img.shields.io/npm/v/@ocavue/starter-ts?color=a1b858&label=)](https://www.npmjs.com/package/@ocavue/starter-ts)
+[![NPM version](https://img.shields.io/npm/v/eslint-plugin-ocavue?color=a1b858&label=)](https://www.npmjs.com/package/eslint-plugin-ocavue)
 
 A minimal [TypeScript](https://www.typescriptlang.org/) library starter with bundling, testing, linting, formatting, and automated npm releases, all preconfigured.
 
