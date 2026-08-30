@@ -34,16 +34,16 @@ Disallow a linebreak between `=>` and an implicit arrow function body. Unlike [`
 
 ```js
 // Incorrect
-const paragraphs = Array.from({ length: blockCount }, (_, index) =>
-  n.paragraph(index === 0 ? 'plain target x' : `plain paragraph ${index}`),
+const items = Array.from({ length: count }, (_, index) =>
+  createItem(index === 0 ? 'first item label' : `item number ${index}`),
 )
 
 // Correct
-const short = (index) => n.paragraph(`plain paragraph ${index}`)
+const short = (index) => createItem(`item number ${index}`)
 
 // Correct (what the fixer produces, after formatting)
-const paragraphs = Array.from({ length: blockCount }, (_, index) => {
-  return n.paragraph(index === 0 ? 'plain target x' : `plain paragraph ${index}`)
+const items = Array.from({ length: count }, (_, index) => {
+  return createItem(index === 0 ? 'first item label' : `item number ${index}`)
 })
 ```
 
