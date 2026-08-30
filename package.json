@@ -1,0 +1,59 @@
+{
+  "name": "@ocavue/starter-ts",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@11.24.0",
+  "description": "TypeScript starter kit",
+  "author": "ocavue <ocavue@gmail.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/ocavue",
+  "homepage": "https://github.com/ocavue/starter-ts#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ocavue/starter-ts.git"
+  },
+  "bugs": "https://github.com/ocavue/starter-ts/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint": "pnpm run lint:eslint && pnpm run lint:oxfmt && pnpm run lint:knip",
+    "lint:oxfmt": "oxfmt --check",
+    "lint:eslint": "eslint",
+    "lint:knip": "knip",
+    "fix": "pnpm run fix:oxfmt && pnpm run fix:eslint",
+    "fix:oxfmt": "oxfmt",
+    "fix:eslint": "eslint --fix",
+    "test": "vitest",
+    "typecheck": "tsc -b"
+  },
+  "devDependencies": {
+    "@ocavue/eslint-config": "^4.13.5",
+    "@ocavue/tsconfig": "^0.7.1",
+    "@types/node": "^24.0.0",
+    "eslint": "^10.9.1",
+    "knip": "^6.33.0",
+    "oxfmt": "^0.65.0",
+    "tsdown": "^0.22.14",
+    "typescript": "^6.0.3",
+    "vite": "^8.2.2",
+    "vitest": "^4.1.11"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
