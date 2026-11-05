@@ -21,6 +21,7 @@ export default [
     plugins: { ocavue },
     rules: {
       'ocavue/no-implicit-arrow-linebreak': 'error',
+      'ocavue/prefer-while-true': 'error',
     },
   },
 ]
@@ -48,6 +49,24 @@ const items = Array.from({ length: count }, (_, index) => {
 ```
 
 When a comment sits between `=>` and the body, the rule reports without autofixing so the fix never drops a comment.
+
+### `prefer-while-true`
+
+Enforce `while (true)` instead of `for (;;)` for infinite loops. Rules such as [`no-constant-condition`](https://eslint.org/docs/latest/rules/no-constant-condition) (with `checkLoops: "all"`) and [`@typescript-eslint/no-unnecessary-condition`](https://typescript-eslint.io/rules/no-unnecessary-condition) report `while (true)` but not `for (;;)`, so people often rewrite the loop as `for (;;)` to silence them. That only hides the infinite loop from the linter: the code still loops forever. This rule removes that workaround. `while (true)` also reads more clearly than `for (;;)`.
+
+```js
+// Incorrect
+for (;;) {
+  step()
+}
+
+// Correct (what the fixer produces)
+while (true) {
+  step()
+}
+```
+
+When a comment sits inside the loop head, the rule reports without autofixing so the fix never drops a comment.
 
 ## Sponsors
 
