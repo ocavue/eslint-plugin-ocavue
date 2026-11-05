@@ -21,6 +21,7 @@ export default [
     plugins: { ocavue },
     rules: {
       'ocavue/no-implicit-arrow-linebreak': 'error',
+      'ocavue/prefer-while-true': 'error',
     },
   },
 ]
@@ -48,6 +49,24 @@ const items = Array.from({ length: count }, (_, index) => {
 ```
 
 When a comment sits between `=>` and the body, the rule reports without autofixing so the fix never drops a comment.
+
+### `prefer-while-true`
+
+Enforce `while (true)` instead of `for (;;)` for infinite loops. ESLint's [`no-constant-condition`](https://eslint.org/docs/latest/rules/no-constant-condition) with `checkLoops: "all"` can only enforce the opposite style, and no rule in ESLint core, typescript-eslint, unicorn, sonarjs, Biome, or Oxlint enforces this one.
+
+```js
+// Incorrect
+for (;;) {
+  step()
+}
+
+// Correct (what the fixer produces)
+while (true) {
+  step()
+}
+```
+
+When a comment sits inside the loop head, the rule reports without autofixing so the fix never drops a comment.
 
 ## Sponsors
 
