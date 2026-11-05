@@ -52,7 +52,7 @@ When a comment sits between `=>` and the body, the rule reports without autofixi
 
 ### `prefer-while-true`
 
-Enforce `while (true)` instead of `for (;;)` for infinite loops. ESLint's [`no-constant-condition`](https://eslint.org/docs/latest/rules/no-constant-condition) with `checkLoops: "all"` can only enforce the opposite style, and no rule in ESLint core, typescript-eslint, unicorn, sonarjs, Biome, or Oxlint enforces this one.
+Enforce `while (true)` instead of `for (;;)` for infinite loops. Rules such as [`no-constant-condition`](https://eslint.org/docs/latest/rules/no-constant-condition) (with `checkLoops: "all"`) and [`@typescript-eslint/no-unnecessary-condition`](https://typescript-eslint.io/rules/no-unnecessary-condition) report `while (true)` but not `for (;;)`, so people often rewrite the loop as `for (;;)` to silence them. That only hides the infinite loop from the linter: the code still loops forever. This rule removes that workaround. `while (true)` also reads more clearly than `for (;;)`.
 
 ```js
 // Incorrect
