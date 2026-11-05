@@ -2,7 +2,7 @@
   "name": "eslint-plugin-ocavue",
   "type": "module",
   "version": "0.1.0",
-  "packageManager": "pnpm@11.28.5",
+  "packageManager": "pnpm@12.16.1",
   "description": "Custom ESLint rules from ocavue",
   "author": "ocavue <ocavue@gmail.com>",
   "license": "MIT",
