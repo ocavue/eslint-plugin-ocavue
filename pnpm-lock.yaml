@@ -167,8 +167,8 @@ importers:
   .:
     devDependencies:
       '@ocavue/eslint-config':
-        specifier: ^4.22.0
-        version: 4.22.0(@typescript-eslint/parser@8.72.1(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3))(@typescript-eslint/typescript-estree@8.72.1(typescript@6.0.3))(@typescript-eslint/utils@8.72.1(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3)
+        specifier: ^4.23.0
+        version: 4.23.0(@typescript-eslint/parser@8.72.1(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3))(@typescript-eslint/typescript-estree@8.72.1(typescript@6.0.3))(@typescript-eslint/utils@8.72.1(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3)
       '@ocavue/tsconfig':
         specifier: ^0.7.1
         version: 0.7.1
@@ -484,8 +484,8 @@ packages:
       '@emnapi/core': ^1.7.1 || ^2.0.0-alpha.4
       '@emnapi/runtime': ^1.7.1 || ^2.0.0-alpha.4
 
-  '@ocavue/eslint-config@4.22.0':
-    resolution: {integrity: sha512-ghLxalIC1xHP8Ve1VqXYO3E4HsbAUM7BrhgiTM+ngAo3LjgHFdM8B2kYnXCgq+t3hYv2L0hlJuLG6yTUBeJk9g==}
+  '@ocavue/eslint-config@4.23.0':
+    resolution: {integrity: sha512-FjsQBM868tLyzG+bchx+Xd3kzuqwohYZx1TvT69p6YrNQFrg4kTiRL9kHCTL5r1+U8zpRUyw6ZSCYGfslNo4cw==}
 
   '@ocavue/tsconfig@0.7.1':
     resolution: {integrity: sha512-jw1LPUqi/f043s61WOYEWWA6P1ZSSYXR3KJXcNxBXXrxiUXhEAbuEBUmi6Qs8NduIVU3xCkbaYw5BU3UyL3G3A==}
@@ -1396,8 +1396,8 @@ packages:
     resolution: {integrity: sha512-4S3/9Nb7A2tiMcpzEQE9bQSlpeOz6WJkgryBuou/SA8W2x2c8Zf4j0NvTKBjv6qNhF9T79tmkecm/0CHqV0UGg==}
     engines: {node: '>=5.0.0'}
 
-  eslint-plugin-ocavue@0.1.0:
-    resolution: {integrity: sha512-K4xat/BdWfNhBDD7rWmiXXJ5bakFLlAgEFWp4CFgxGpviP6CvDF3EP6gvKQQKpxFXw8h0KIhYFQvHLkULghxBg==}
+  eslint-plugin-ocavue@0.2.0:
+    resolution: {integrity: sha512-pSiu6RMb6KzkThY0w1Yh2KqAzCBgZfi70eFYNKZ86Fd8xdIPzVMmIqrHkJQZEc9+zUIkb5IRbQObGsKtXzVrkA==}
     peerDependencies:
       eslint: ^10.0.0
 
@@ -1486,8 +1486,8 @@ packages:
       eslint:
         optional: true
 
-  eslint-plugin-regexp@3.3.1:
-    resolution: {integrity: sha512-58bGUci/AaWAo1ETj6Lsnmy6QXwnSyVONRA805828nnqp7vrTwdaQMc02vtowmYB3A5OB3SLr3r5HgmfxX4dLg==}
+  eslint-plugin-regexp@3.3.3:
+    resolution: {integrity: sha512-bIpFf1uL9AB6MY5cDUXL2lrfuBA+/WLc1AwC+56OsHWo93zoKQ4EcAQ+wsOxq5ozLC9xfTYAb4Si+0w0Ll1hYA==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     peerDependencies:
       eslint: '>=9.38.0'
@@ -1502,8 +1502,8 @@ packages:
       typescript:
         optional: true
 
-  eslint-plugin-vue@10.11.1:
-    resolution: {integrity: sha512-pasVXhl7wUmIvhujoqs/m0mJ9r59QW1IR9XXYKGR0FETzSM+Hhlf4qKIYgWiDDP+9YKv4YfbwskD7LqIdVcgQw==}
+  eslint-plugin-vue@10.12.0:
+    resolution: {integrity: sha512-YsrHHtMaxjWqmxr/Kv9yXUfakUlbTCWtIBvr9eounzj6ZsGJdz1I4UuTIHkhzKHes793Cwo3PGTcvsoBqNyzCA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       '@stylistic/eslint-plugin': ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
@@ -2926,7 +2926,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.3
     optional: true
 
-  '@ocavue/eslint-config@4.22.0(@typescript-eslint/parser@8.72.1(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3))(@typescript-eslint/typescript-estree@8.72.1(typescript@6.0.3))(@typescript-eslint/utils@8.72.1(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3)':
+  '@ocavue/eslint-config@4.23.0(@typescript-eslint/parser@8.72.1(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3))(@typescript-eslint/typescript-estree@8.72.1(typescript@6.0.3))(@typescript-eslint/utils@8.72.1(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3)':
     dependencies:
       '@eslint-community/eslint-plugin-eslint-comments': 4.8.1(eslint@10.14.0(jiti@2.7.0))
       '@eslint-react/eslint-plugin': 5.28.8(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3)
@@ -2938,13 +2938,13 @@ snapshots:
       eslint-plugin-command: 4.0.0(@typescript-eslint/typescript-estree@8.72.1(typescript@6.0.3))(@typescript-eslint/utils@8.72.1(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0))
       eslint-plugin-jsdoc: 65.4.3(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3)
       eslint-plugin-no-only-tests: 3.4.0
-      eslint-plugin-ocavue: 0.1.0(eslint@10.14.0(jiti@2.7.0))
+      eslint-plugin-ocavue: 0.2.0(eslint@10.14.0(jiti@2.7.0))
       eslint-plugin-package-json: 1.10.1(eslint@10.14.0(jiti@2.7.0))
       eslint-plugin-perfectionist: 5.13.0(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3)
       eslint-plugin-react-hooks: 7.1.1(eslint@10.14.0(jiti@2.7.0))
-      eslint-plugin-regexp: 3.3.1(eslint@10.14.0(jiti@2.7.0))
+      eslint-plugin-regexp: 3.3.3(eslint@10.14.0(jiti@2.7.0))
       eslint-plugin-unicorn: 79.0.0(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3)
-      eslint-plugin-vue: 10.11.1(@typescript-eslint/parser@8.72.1(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0))(vue-eslint-parser@10.4.1(eslint@10.14.0(jiti@2.7.0)))
+      eslint-plugin-vue: 10.12.0(@typescript-eslint/parser@8.72.1(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0))(vue-eslint-parser@10.4.1(eslint@10.14.0(jiti@2.7.0)))
       globals: 17.13.0
       typescript-eslint: 8.72.1(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3)
       vue-eslint-parser: 10.4.1(eslint@10.14.0(jiti@2.7.0))
@@ -3596,7 +3596,7 @@ snapshots:
 
   eslint-plugin-no-only-tests@3.4.0: {}
 
-  eslint-plugin-ocavue@0.1.0(eslint@10.14.0(jiti@2.7.0)):
+  eslint-plugin-ocavue@0.2.0(eslint@10.14.0(jiti@2.7.0)):
     dependencies:
       eslint: 10.14.0(jiti@2.7.0)
 
@@ -3739,7 +3739,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-regexp@3.3.1(eslint@10.14.0(jiti@2.7.0)):
+  eslint-plugin-regexp@3.3.3(eslint@10.14.0(jiti@2.7.0)):
     dependencies:
       '@eslint-community/eslint-utils': 4.10.1(eslint@10.14.0(jiti@2.7.0))
       '@eslint-community/regexpp': 4.12.2
@@ -3780,7 +3780,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-vue@10.11.1(@typescript-eslint/parser@8.72.1(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0))(vue-eslint-parser@10.4.1(eslint@10.14.0(jiti@2.7.0))):
+  eslint-plugin-vue@10.12.0(@typescript-eslint/parser@8.72.1(eslint@10.14.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0))(vue-eslint-parser@10.4.1(eslint@10.14.0(jiti@2.7.0))):
     dependencies:
       '@eslint-community/eslint-utils': 4.10.1(eslint@10.14.0(jiti@2.7.0))
       eslint: 10.14.0(jiti@2.7.0)
