@@ -21,6 +21,7 @@ export default [
     plugins: { ocavue },
     rules: {
       'ocavue/no-implicit-arrow-linebreak': 'error',
+      'ocavue/prefer-noop': 'error',
       'ocavue/prefer-while-true': 'error',
     },
   },
@@ -35,9 +36,9 @@ Disallow a linebreak between `=>` and an implicit arrow function body. Unlike [`
 
 ```js
 // Incorrect
-const items = Array.from({ length: count }, (_, index) =>
-  createItem(index === 0 ? 'first item label' : `item number ${index}`),
-)
+const items = Array.from({ length: count }, (_, index) => {
+  return createItem(index === 0 ? 'first item label' : `item number ${index}`)
+})
 
 // Correct
 const short = (index) => createItem(`item number ${index}`)
@@ -50,13 +51,43 @@ const items = Array.from({ length: count }, (_, index) => {
 
 When a comment sits between `=>` and the body, the rule reports without autofixing so the fix never drops a comment.
 
+### `prefer-noop`
+
+Enforce `noop` from [`@ocavue/utils`](https://github.com/ocavue/utils) instead of inline empty functions such as `() => {}`, `() => undefined` and `function () {}`. A shared `noop` reads as intent ("do nothing on purpose") and avoids creating a new function on every render or call.
+
+```js
+// Incorrect
+;<button onClick={() => {}} />
+
+// Correct (what the fixer produces)
+import { noop } from '@ocavue/utils'
+
+;<button onClick={noop} />
+```
+
+The rule only runs when the nearest `package.json` of the linted file lists `@ocavue/utils` in `dependencies`, `devDependencies` or `peerDependencies`, or when the file already imports `@ocavue/utils`. Set `checkDependency: false` to run it in every file:
+
+```js
+export default [
+  {
+    rules: {
+      'ocavue/prefer-noop': ['error', { checkDependency: false }],
+    },
+  },
+]
+```
+
+The rule skips functions where the swap could change runtime behavior: `async` functions, generators, named function expressions, methods, and functions with default values or destructuring in their parameters.
+
+The fixer adds `noop` to an existing `import { ... } from '@ocavue/utils'`, or adds a new import. It reports without autofixing when the function holds a comment, when another binding named `noop` is in scope, or when the file is not an ES module.
+
 ### `prefer-while-true`
 
 Enforce `while (true)` instead of `for (;;)` for infinite loops. Rules such as [`no-constant-condition`](https://eslint.org/docs/latest/rules/no-constant-condition) (with `checkLoops: "all"`) and [`@typescript-eslint/no-unnecessary-condition`](https://typescript-eslint.io/rules/no-unnecessary-condition) report `while (true)` but not `for (;;)`, so people often rewrite the loop as `for (;;)` to silence them. That only hides the infinite loop from the linter: the code still loops forever. This rule removes that workaround. `while (true)` also reads more clearly than `for (;;)`.
 
 ```js
 // Incorrect
-for (;;) {
+while (true) {
   step()
 }
 
