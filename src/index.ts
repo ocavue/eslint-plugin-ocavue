@@ -5,6 +5,7 @@ import { version } from '../package.json'
 import noImplicitArrowLinebreak from './rules/no-implicit-arrow-linebreak'
 import preferConstantFunction from './rules/prefer-constant-function'
 import preferNoop from './rules/prefer-noop'
+import preferSleep from './rules/prefer-sleep'
 import preferWhileTrue from './rules/prefer-while-true'
 
 const plugin = {
@@ -16,6 +17,7 @@ const plugin = {
     'no-implicit-arrow-linebreak': noImplicitArrowLinebreak,
     'prefer-constant-function': preferConstantFunction,
     'prefer-noop': preferNoop,
+    'prefer-sleep': preferSleep,
     'prefer-while-true': preferWhileTrue,
   },
 } satisfies ESLint.Plugin

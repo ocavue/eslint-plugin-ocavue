@@ -23,6 +23,7 @@ export default [
       'ocavue/no-implicit-arrow-linebreak': 'error',
       'ocavue/prefer-constant-function': 'error',
       'ocavue/prefer-noop': 'error',
+      'ocavue/prefer-sleep': 'error',
       'ocavue/prefer-while-true': 'error',
     },
   },
@@ -104,6 +105,25 @@ export default [
 The rule skips functions where the swap could change runtime behavior: `async` functions, generators, named function expressions, methods, and functions with default values or destructuring in their parameters.
 
 The fixer adds `noop` to an existing `import { ... } from '@ocavue/utils'`, or adds a new import. It reports without autofixing when the function holds a comment, when another binding named `noop` is in scope, or when the file is not an ES module.
+
+### `prefer-sleep`
+
+Enforce `sleep` from [`@ocavue/utils`](https://github.com/ocavue/utils) instead of a `new Promise` that only resolves after `setTimeout`.
+
+```js
+// Incorrect
+await new Promise((resolve) => setTimeout(resolve, 100))
+await new Promise((resolve) => setTimeout(() => resolve(), 100))
+
+// Correct (what the fixer produces)
+import { sleep } from '@ocavue/utils'
+
+await sleep(100)
+```
+
+The rule also matches `globalThis.setTimeout` and `window.setTimeout`, block bodies, and `new Promise<void>` in TypeScript. It skips promises that resolve with a value, pass extra arguments to `setTimeout`, or compute the delay from the executor's parameters.
+
+The rule uses the same `checkDependency` option and import handling as [`prefer-noop`](#prefer-noop).
 
 ### `prefer-while-true`
 
