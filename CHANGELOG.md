@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0](https://github.com/ocavue/eslint-plugin-ocavue/compare/eslint-plugin-ocavue-v0.2.0...eslint-plugin-ocavue-v0.3.0) (2026-11-09)
+
+
+### Features
+
+* add `prefer-constant-function` rule ([#15](https://github.com/ocavue/eslint-plugin-ocavue/issues/15)) ([dad37b8](https://github.com/ocavue/eslint-plugin-ocavue/commit/dad37b8542a427db69f1f8484099e16de4d7f279))
+* add `prefer-noop` rule ([#14](https://github.com/ocavue/eslint-plugin-ocavue/issues/14)) ([69ed752](https://github.com/ocavue/eslint-plugin-ocavue/commit/69ed752a22f6c47c379f965cd40924315e022e0f))
+* add `prefer-sleep` rule ([#16](https://github.com/ocavue/eslint-plugin-ocavue/issues/16)) ([c6c6d3b](https://github.com/ocavue/eslint-plugin-ocavue/commit/c6c6d3b2012408fea7681b9b571588d62aa5cd61))
+
 ## [0.2.0](https://github.com/ocavue/eslint-plugin-ocavue/compare/eslint-plugin-ocavue-v0.1.0...eslint-plugin-ocavue-v0.2.0) (2026-11-05)
 
 
