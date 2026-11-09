@@ -57,7 +57,7 @@ export function isPackageAvailable(context: Rule.RuleContext, packageName: strin
   )
 }
 
-function findVariable(scope: Scope.Scope | null, name: string): Scope.Variable | undefined {
+export function findVariable(scope: Scope.Scope | null, name: string): Scope.Variable | undefined {
   for (let current = scope; current; current = current.upper) {
     const variable = current.set.get(name)
     if (variable) {
