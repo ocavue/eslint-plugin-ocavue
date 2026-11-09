@@ -21,6 +21,7 @@ export default [
     plugins: { ocavue },
     rules: {
       'ocavue/no-implicit-arrow-linebreak': 'error',
+      'ocavue/prefer-constant-function': 'error',
       'ocavue/prefer-noop': 'error',
       'ocavue/prefer-while-true': 'error',
     },
@@ -50,6 +51,29 @@ const items = Array.from({ length: count }, (_, index) => {
 ```
 
 When a comment sits between `=>` and the body, the rule reports without autofixing so the fix never drops a comment.
+
+### `prefer-constant-function`
+
+Enforce `returnTrue`, `returnFalse` and `returnNull` from [`@ocavue/utils`](https://github.com/ocavue/utils) instead of inline functions such as `() => true`, `() => false` and `() => null`.
+
+```js
+// Incorrect
+const all = items.filter(() => true)
+
+// Correct (what the suggestion produces)
+import { returnTrue } from '@ocavue/utils'
+
+const all = items.filter(returnTrue)
+```
+
+The rule offers an editor suggestion, not an autofix. `returnFalse` returns the literal type `false`, while TypeScript infers `() => false` as `() => boolean`, so the swap can narrow an inferred type:
+
+```ts
+const [open, setOpen] = useState(() => false) // open: boolean
+const [open, setOpen] = useState(returnFalse) // open: false, so setOpen(true) is a type error
+```
+
+The rule uses the same `checkDependency` option, skip conditions and import handling as [`prefer-noop`](#prefer-noop).
 
 ### `prefer-noop`
 
